@@ -24,7 +24,8 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  database: dbatr5f0j2hoq0
+  username: zqpuuuodvigwqq
+  password: vvSjoy40V5TxTAW6DrGm5XCoE1
   port: 5432
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
-  host:     <%= ENV['IP'] %>
+  host: ec2-54-227-240-164.compute-1.amazonaws.com
