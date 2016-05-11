@@ -22,7 +22,7 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8mb4
   pool: 5
   database: d4gr2in4tc52ru
   username: zqpuuuodvigwqq
