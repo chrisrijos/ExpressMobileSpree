@@ -15,4 +15,11 @@ Spree.config do |config|
   # config.track_inventory_levels = false
 end
 
+Spree.config do |config|
+  config.use_s3 = true
+  config.s3_bucket = 'expressmobileproducts'
+  config.s3_access_key = "AKIAJLMAISGBIX4SDW3A"
+  config.s3_secret = "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"
+end
+
 Spree.user_class = "Spree::User"
