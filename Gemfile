@@ -28,11 +28,11 @@ group :development do
   gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'mailcatcher'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'aws-sdk', '< 2.0'
+  gem 'mailgun_rails'
 end
