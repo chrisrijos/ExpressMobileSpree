@@ -2,5 +2,6 @@
   <li class="btn btn-info"><%= link_to Spree.t(:my_account), spree.account_path %></li>
   <li class="btn btn-danger"><%= link_to Spree.t(:logout), spree.logout_path %></li>
 <% else %>
+  <li id="link-to-login" class="btn btn-success"><%= link_to 'Sign Up', spree.login_path %></li>
   <li id="link-to-login" class="btn btn-success"><%= link_to Spree.t(:login), spree.login_path %></li>
 <% end %>
