@@ -85,7 +85,7 @@ Rails.application.configure do
     :address        => 'smtp.mailgun.org',
     :user_name      => 'postmaster@appc30e3753f42f42b384fee4afdd63cdfb.mailgun.org',
     :password       => 'af1dea1e3979fd360c95997ccfcbb5e5',
-    :domain         => 'appc30e3753f42f42b384fee4afdd63cdfb.mailgun.org',
+    :domain         => 'expressmobilephone.com',
     :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
