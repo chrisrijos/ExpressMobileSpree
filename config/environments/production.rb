@@ -83,7 +83,7 @@ Rails.application.configure do
     ActionMailer::Base.smtp_settings = {
     :port           => 587,
     :address        => 'smtp.mailgun.org',
-    :user_name      => 'postmaster@appc30e3753f42f42b384fee4afdd63cdfb.mailgun.org',
+    :user_name      => 'postmaster@expressmobilephone.com',
     :password       => 'af1dea1e3979fd360c95997ccfcbb5e5',
     :domain         => 'expressmobilephone.com',
     :authentication => :plain,
