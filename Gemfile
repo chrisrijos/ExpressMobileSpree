@@ -36,4 +36,5 @@ group :production do
   gem 'rails_12factor'
   gem 'aws-sdk', '< 2.0'
   gem 'mailgun_rails'
+  gem 'braintree'
 end
