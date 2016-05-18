@@ -1,17 +1,25 @@
 <div id="spree-header">
-  <figure id="logo" class="col-md-4 col-sm-3" data-hook>
+  <!--<figure id="logo" class="col-md-4 col-sm-3" data-hook>
           <%= logo %>
-        </figure>
-  <header id="header" data-hook>
-    <div class="container" id="fullcover">
-      <div class="jumbotron" id="sales-jumbotron">
-         <h1 id="sales-header">Express Mobile Phone</h1>
-      </div>
-      <div class="row">
-        <%= render :partial => 'spree/shared/nav_bar' %>
-      </div>
-    </div>
-  </header>
+        </figure>-->
+        <header id="header" data-hook>
+           <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <%= image_tag("spree_header.png") %>
+                    <div class="container">
+                      <div class="carousel-caption">
+      
+                      </div>
+                    </div>
+                  </div>
+                  <!--Insert carousel here-->
+                </div>
+            <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>-->
+          </div><!-- /.carousel -->
+        
+        </header>
   <div class="container">
     <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
   </div>
