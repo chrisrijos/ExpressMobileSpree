@@ -84,7 +84,7 @@ Rails.application.configure do
     :port           => 587,
     :address        => 'smtp.mailgun.org',
     :user_name      => 'postmaster@expressmobilephone.com',
-    :password       => 'cdd4ce424907474d1d4bdf283a22d049',
+    :password       =>  ENV["SMTP_PASSWORD"],
     :domain         => 'expressmobilephone.com',
     :authentication => :plain,
   }
