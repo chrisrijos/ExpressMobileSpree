@@ -38,4 +38,5 @@ group :production do
   gem 'aws-sdk', '< 2.0'
   gem 'mailgun_rails'
   gem 'braintree'
+  gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
 end
