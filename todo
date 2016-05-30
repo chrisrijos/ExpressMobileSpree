@@ -1,7 +1,8 @@
 1. Change header fonts by looking at other ecommerce. 
 2. Make categories within product brand/type breakdown to a larger easier to see text
 1. Add cart link to products pages for mobile navigation. 
-2. Switch to puma web server
-3. Integrate payment gateway for production. 
-4. Add Static Pages controller
-6. Change terrible third picture jamaal picked. 
+2. Switch to puma web server 
+3. Integrate payment gateway for production. -in progress --requires account verification
+4. Add Static Pages controller --completed --chris
+6. Change terrible third picture jamaal picked. --in progress  --maal
+7. Add dropdown to nav for support 

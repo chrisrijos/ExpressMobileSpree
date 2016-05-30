@@ -1,6 +1,7 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
 @import "bootstrap-sprockets";
+@import "font-awesome";
 @import "variables";
 @import "bootstrap";
 
@@ -105,6 +106,7 @@ table {
 .list-group-item{
   text-align: center;
   color: white;
+  font-size: 17px;
    
 }
 
@@ -175,6 +177,8 @@ table {
     left: 50%;
     z-index: 3;
     color: #fff;
+    font-size: 6px;
+    font-family: sans-serif, Arial; 
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 1px 0 rgba(0,0,0,.75);
@@ -332,5 +336,47 @@ table {
 			width: 100%;
 		}
 	}
-	
+.faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "e072"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    }	
+    
+    
+    h1, h2, h3, h4, h5 , h6{
+      
+      font-size: 20px;
+      font-weight: 700;
+      
+    }
+    
+    .breadcrumbs {
+      
+      text-align: center;
+      
+    }
 	

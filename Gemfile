@@ -29,6 +29,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'mail'
+  gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
 end
 
 group :production do
