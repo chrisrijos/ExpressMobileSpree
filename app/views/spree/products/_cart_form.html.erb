@@ -4,6 +4,7 @@
       <div id="product-variants" class="col-md-6">
         <h3 class="product-section-title"><%= Spree.t(:variants) %></h3>
         <ul class="list-group">
+          <li>
           <%= select_tag "variant_id", options_for_select(@product.variants_and_option_values(current_currency).collect{ |v| ["#{variant_options(v)}  #{variant_price(v)}", v.id] })%>
             </li>
         </ul>

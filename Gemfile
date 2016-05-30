@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spree', '~> 3.1.0.rc1'
 gem 'spree_auth_devise', '~> 3.1.0.rc1'
 gem 'spree_gateway', '~> 3.1.0.rc1'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -29,7 +30,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'mail'
-  gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
 end
 
 group :production do
@@ -38,5 +38,4 @@ group :production do
   gem 'aws-sdk', '< 2.0'
   gem 'mailgun_rails'
   gem 'braintree'
-  gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
 end

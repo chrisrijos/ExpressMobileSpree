@@ -374,14 +374,22 @@ table {
       
     }
     
-    .breadcrumbs {
-      
-      text-align: center;
-      
-    }
     
+    //boldness of the product
     .info {
     
     font-weight: 600;
 }
-	
+
+
+	//dropdown 
+	.show-on-hover:hover > ul.dropdown-menu {
+    display: block;   
+    background-color: #444544;
+}
+
+  .dropdown-menu {
+    
+    background-color: #444544;
+    
+  }

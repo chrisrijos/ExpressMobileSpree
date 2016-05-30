@@ -1,8 +1,14 @@
-1. Change header fonts by looking at other ecommerce. 
-2. Make categories within product brand/type breakdown to a larger easier to see text
+1. Change header fonts by looking at other ecommerce. -- COMPLETE
+2. Make categories within product brand/type breakdown to a larger easier to see text -- COMPLETE
 1. Add cart link to products pages for mobile navigation. 
 2. Switch to puma web server 
 3. Integrate payment gateway for production. -in progress --requires account verification
-4. Add Static Pages controller --completed --chris
-6. Change terrible third picture jamaal picked. --in progress  --maal
+4. Add Static Pages controller --COMPLETE --chris
+6. Change terrible third picture jamaal picked. -- COMPLETE --maal
 7. Add dropdown to nav for support 
+8. Change the taxnomies style 
+9. Figure out static tax rate
+10. Add reviews to site 
+11. Optmize color of containers on products pages
+12. Fix font awesome on FAQ
+13.
