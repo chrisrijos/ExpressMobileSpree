@@ -27,6 +27,11 @@
 
     <div class="col-md-8 col-sm-7" data-hook="product_right_part">
       <div data-hook="product_right_part_wrap">
+        <ul class="nav navbar-nav navbar-right" data-hook>
+        <div id="link-to-cart" class="btn btn-success addon">
+            <%= link_to Spree.t(:cart), '/cart' %>
+        </div>
+        </ul>
         <div id="product-description" data-hook="product_description">
           <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
 
@@ -44,5 +49,6 @@
         </div>
       </div>
     </div>
+     <script>Spree.fetch_cart()</script>
   </div>
 <% end %>
