@@ -32,8 +32,12 @@
             </div>
             <div class="centeralign">
               <p><%= Spree.t(:average_customer_rating) %>:</p>
-              <span title="<%= txt_stars(product.stars, show_out_of = true) %>">
-                <%= render 'spree/reviews/stars', stars: product.stars %>
+              <span title="<%= txt_stars(product.stars, show_out_of = false) %>">
+              <% if product.stars < 5 %> 
+                  <%= render 'spree/reviews/stars', stars: product.stars %>
+                <% else %> 
+                  <%= render 'spree/reviews/stars', stars: 0 %>
+              <% end %>
               </span>
             </div>
             <div class="panel-footer text-center">
