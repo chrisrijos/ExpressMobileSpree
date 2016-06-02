@@ -1,54 +1,95 @@
-<div id="spree-header">
-  <!--<figure id="logo" class="col-md-4 col-sm-3" data-hook>
-          <%= logo %>
-        </figure>-->
-        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-        <!-- Overlay -->
-        <div class="overlay"></div>
-        <% banner = Array[
-            "We carry amazing products at amazing prices",
-            "We warranty our labor",
-            "Shop with us you wont regret it"]
-        %>
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#bs-carousel" data-slide-to="1"></li>
-          <li data-target="#bs-carousel" data-slide-to="2"></li>
-        </ol>
-        
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item slides active">
-            <div class="slide-1"></div>
-            <div class="hero">
-              <hgroup>
-                  <h1><%= banner[0] %></h1>        
-                  <h3>Phones as low as $99.99</h3>
-              </hgroup>
-            </div>
-          </div>
-          <div class="item slides">
-            <div class="slide-2"></div>
-            <div class="hero">        
-              <hgroup>
-                  <h1><%= banner[1] %></h1>        
-                  <h3>All of our products are backed by our team of experts.</h3>
-              </hgroup>       
-            </div>
-          </div>
-          <div class="item slides">
-            <div class="slide-3"></div>
-            <div class="hero">        
-              <hgroup>
-                  <h1><%= banner[2] %></h1>        
-                  <h3>We guarantee the best service in town.</h3>
-              </hgroup>
-            </div>
-          </div>
-        </div> 
-      </div>
-  <div class="container">
+ <script>
+   $(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+ </script>
+ 
+  <div id="spree-header">
+   <div class="container" >
+  </div>
     <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
   </div>
+  <div class="container" id="top-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <%= image_tag 'sam4.jpg' %>
+                <div class="carousel-caption">
+                    <div class="transbox">
+                    <h3>Your choice in Like New Phones.</h3>
+                    <p>
+                        We back all of our products with a quality labor guarantee.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <%= image_tag 'sam3.jpg' %>
+                <div class="carousel-caption">
+                  <div class="transbox">
+                    <h3>
+                        Shipping</h3>
+                    <p>
+                        We offer local pickup at our Pensacola, FL location, and shipping to all 50 U.S. States.</p>
+                        </div>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+               <%= image_tag 'sam.jpg' %>
+                <div class="carousel-caption">
+                  <div class="transbox">
+                    <h3>
+                        Frequently Asked Questions</h3>
+                    <p>
+                        If you would like to see answers to common concerns regarding shipping, products, or warranties check out our F.A.Q</p>
+                        </div>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                 <%= image_tag 'sam2.jpg' %>
+                <div class="carousel-caption">
+                  <div class="transbox">
+                    <h3>
+                       Who we are</h3>
+                    <p>
+                       We are a company dedicated to Mobile devices.</p>
+                        </div>
+                </div>
+            </div>
+            <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+        <ul class="nav nav-pills nav-justified" >
+            <li id="tab-pills" data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Promotions<small>Keep up to date with our latest promotions.</small></a></li>
+            <li id="tab-pills" data-target="#myCarousel" data-slide-to="1"><a href="#">Shipping<small>Information related to shipping</small></a></li>
+            <li id="tab-pills" data-target="#myCarousel" data-slide-to="2"><a href="http://www.expressmobilephone.com/faq">F.A.Q<small>Frequently Asked Questions</small></a></li>
+            <li id="tab-pills" data-target="#myCarousel" data-slide-to="3"><a href="#">About Us<small>Everything about us</small></a></li>
+        </ul>
+    </div>
+    <!-- End Carousel -->
 </div>
+
