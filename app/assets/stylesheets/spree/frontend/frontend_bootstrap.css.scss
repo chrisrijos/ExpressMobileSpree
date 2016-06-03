@@ -5,6 +5,9 @@
 @import "variables";
 @import "bootstrap";
 
+
+
+
 #h{
   text-align: center;
   color: white;
@@ -195,6 +198,7 @@ body
 .nav-pills>li[data-slide-to="3"].active a { background-color: #2980b9 }
 
 
+//Page Header Carousel Container
 
    .transbox {
      
@@ -202,12 +206,26 @@ body
   margin: 25px;
   background-color: #444544;
   font-weight: 600;
-  opacity: 0.7;
+  opacity: 0.6;
   padding-top: 3%;
   padding-bottom: 3%;
+  font-family: "Montserrat", sans-serif;
+  font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(black,.15);
+  border-radius: 25px;
 
 }
 
+hr {
+  
+  color: white;
+  background-color: white;
+  height:1px
+  
+}
 
 
 /**/
@@ -248,6 +266,7 @@ body
 	}
 
 	@media (min-width: 768px) {
+	  
 		.navbar-collapse {
 			padding-top: 0px !important;
 			padding-right: 38px !important;
