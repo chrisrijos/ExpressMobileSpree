@@ -9,6 +9,10 @@
   color: white;
 }
 
+.dropdown-menu{
+  color: white;
+}
+
 #h{
   text-align: center;
   color: white;
@@ -29,13 +33,7 @@
     }
   }
 
-  .nav a {
-    color: white;
 
-    &:hover, &:focus {
-      background: rgba($gray-darker, 0.4);
-    }
-  }
   .navbar-header{
     color: white;
     .a{

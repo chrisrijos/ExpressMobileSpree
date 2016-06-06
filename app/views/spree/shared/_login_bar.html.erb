@@ -1,6 +1,6 @@
 <% if spree_current_user %>
-  <li><%= link_to Spree.t(:my_account), spree.account_path  %></li>
-  <li ><%= link_to Spree.t(:logout), spree.logout_path %></li>
+  <li><%= link_to Spree.t(:my_account), spree.account_path, id: "whiteoverride"%></li>
+  <li ><%= link_to Spree.t(:logout), spree.logout_path, id: "whiteoverride" %></li>
 <% else %>
   
   <li id="link-to-login" class="btn btn-primary-outline"><%= link_to 'Sign Up', spree.signup_path, id: "whiteoverride" %></li>
