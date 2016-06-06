@@ -14,7 +14,7 @@
 			</div>
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     <ul class="nav navbar-nav" data-hook>
-      <li id="home-link" class="btn btn-primary" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+      <li id="home-link" class="btn btn-primary" data-hook><%= link_to Spree.t(:home), spree.root_path, id: "whiteoverride" %></li>
       <li>
          <%= render :partial => 'spree/shared/nav_bar' %>
       </li>

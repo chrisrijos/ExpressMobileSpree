@@ -5,12 +5,16 @@
 @import "variables";
 @import "bootstrap";
 
+#whiteoverride{
+  color: white;
+}
+
 #h{
   text-align: center;
   color: white;
 }
 // -- Spree Custom Header and Footer ---------------------
-#spree-header {
+// -- Spree Custom Header and Footer ---------------------
 
   #header {
    
@@ -32,9 +36,14 @@
       background: rgba($gray-darker, 0.4);
     }
   }
-
-}
-.navbar {
+  .navbar-header{
+    color: white;
+    .a{
+      color: white;
+  
+    }
+  }
+  .navbar {
     border: 0;
     margin-bottom: 0;
     background: #444544;
