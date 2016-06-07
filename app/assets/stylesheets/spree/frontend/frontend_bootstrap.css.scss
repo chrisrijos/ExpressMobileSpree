@@ -8,7 +8,7 @@
 .col-sm-9{
   background-color: #444544;
   li:hover, &:focus {
-      background: black;
+      background: gray;
     }
 }
 .list-group-item{
@@ -224,6 +224,7 @@ body
 
 }
 
+
 hr {
   
   
@@ -231,8 +232,12 @@ hr {
   height:1px
   
 }
-
-
+#sidebar{
+  
+  .taxonomy-root{
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+}
 /**/
 .navbar-collapse {
 		position: relative;
