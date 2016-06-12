@@ -4,7 +4,7 @@
   			<%= image_tag("navLOGO.png", alt: "Site Logo") %> 
   	</a>
   </span>
-  <div class="container">
+   <div class="container">
     	<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
   			 
@@ -19,7 +19,7 @@
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
     
     <!--Navbar ul class containing home link-->
-    <ul class="nav navbar-nav" data-hook>
+    <ul class="nav navbar-nav"  data-hook>
       <li id="home-link" class="btn btn-primary" data-hook><%= link_to Spree.t(:home), spree.root_path, id: "whiteoverride" %></li>
       <li>
          <%= render :partial => 'spree/shared/nav_bar' %>
@@ -46,4 +46,5 @@
       <script>Spree.fetch_cart()</script>
     </ul>
   </div>
+  </nav>
 </nav>
