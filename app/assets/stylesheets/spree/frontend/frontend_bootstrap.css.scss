@@ -963,11 +963,25 @@ hr {
 
 }
 
+.logo-image {
+  height: 140%;
+  width: 140%;
+}
+
 @media screen and (max-width: 728px){
+  
+  
+  .logo-image {
+    
+    height: 75%;
+    width: 75%;
+    
+  }
+  
   #sizof {
   
   height: 32%;
-  width: 80%;
+  width: 100%;
   position:relative;
   padding-top: 10px;
   padding-bottom: 10px;
