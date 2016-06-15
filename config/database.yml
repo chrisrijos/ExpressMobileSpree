@@ -28,5 +28,6 @@ production:
   username: ENV["DB_USERNAME"]
   password: ENV["DB_PASSWORD"]
   port: 5432
-  host: ec2-54-225-64-254.compute-1.amazonaws.com
-  
+  host: ENV["AWS_HOST"]
+ 
+
