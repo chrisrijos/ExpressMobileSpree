@@ -163,6 +163,8 @@ GEM
       actionmailer (>= 3.2.13)
       json (>= 1.7.7)
       rest-client (>= 1.6.7)
+    masonry-rails (0.2.4)
+      railties
     mime-types (2.99.2)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
@@ -387,6 +389,7 @@ DEPENDENCIES
   jquery-rails
   mail
   mailgun_rails
+  masonry-rails
   pg
   rails (= 4.2.6)
   rails_12factor

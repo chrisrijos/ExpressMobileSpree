@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'masonry-rails'
 
 gem 'spree', '~> 3.1.0.rc1'
 gem 'spree_auth_devise', '~> 3.1.0.rc1'

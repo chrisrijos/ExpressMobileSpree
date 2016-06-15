@@ -1,37 +1,162 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-     	<a class="navbar-brand" id="whiteoverride">
-     	  Express Mobile Phone
-  			<%= image_tag("navLOGO.png", alt: "Site Logo") %> 
-  	</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="btn btn-primary-outline"  data-hook><%= link_to Spree.t(:home), spree.root_path, id: "whiteoverride" %></li>
-        <li>
-         <%= render :partial => 'spree/shared/nav_bar' %>
-      </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-          <li id="link-to-cart" class="btn btn-primary-outline" data-hook>
-                    <noscript>
-                      <%= link_to Spree.t(:cart), '/cart' %>
-                    </noscript>
-                  &nbsp;
-              <script>Spree.fetch_cart()</script>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<div class="header">
+	<div class="header-top">
+		<div class="container">
+				<div class="col4 logo">
+						<%= image_tag 'navLOGO.png', class: 'logo-image'%>
+				</div>
+			
+			<div class="container-fluid header-right" id="rightalign">
+		    <% if spree_current_user %>
+          <p><%= link_to Spree.t(:my_account), spree.account_path %></p>
+          <p><%= link_to Spree.t(:logout), spree.logout_path %></p>
+          <% else %>
+            <p><a href="#myModal" data-toggle="modal" data-target="#myModal">Log-in</a>
+            <p><a href="#signupModal" data-toggle="modal" data-target="#signupModal">Sign-up</a>
+          <% end %>
+				  <p id="link-to-cart" data-hook>
+            <noscript>
+              <%= link_to Spree.t(:cart), '/cart' %>
+            </noscript>
+            &nbsp;
+          </p>
+					<div class="clearfix"> </div>
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="head-top">
+				<div class="col-sm-2 number">
+					<span><i class="glyphicon glyphicon-phone"></i><a href="tel:+18507916996">850-791-6996</a></span><br>
+					<span><i class="glyphicon glyphicon-envelope"></i><a href="mailto:expressmobiletechs@gmail.com">  Email Us!</a></span>
+				</div>
+		 <div class="col-sm-8 h_menu4">
+				<ul class="memenu skyblue">
+					  <li class=" grid"><a  href="#">Home</a></li>	
+				      <li><%= link_to 'AT&T', 'http://www.expressmobilephone.com/t/carrier/att' %>
+				      	<div class="mepanel">
+						<div class="row">
+							<div class="col1">
+								<div class="h_nav">
+									<h4></h4>
+									<ul>
+										
+									</ul>	
+								</div>							
+							</div>
+							<div class="col1">
+								<div class="h_nav">
+									<h4></h4>
+									
+								</div>							
+							</div>
+							<div class="col1">
+															
+							</div>
+						  </div>
+						</div>
+					</li>
+				    <li class="grid"><%= link_to 'Verizon', 'http://www.expressmobilephone.com/t/carrier/verizon' %>
+					  	<div class="mepanel">
+						<div class="row">
+							<div class="col1">
+								<div class="h_nav">
+									<h4></h4>
+									<ul>
+						
+									</ul>	
+								</div>							
+							</div>
+						
+							<div class="col1">
+								<div class="h_nav">
+									<h4>Popular Brands</h4>
+									<ul>
+										
+									</ul>	
+								</div>												
+							</div>
+						  </div>
+						</div>
+			    </li>
+			    <%= link_to 'Unlocked', 'http://www.expressmobilephone.com/t/carrier/unlocked' %>
+					  	<div class="mepanel">
+						<div class="row">
+							<div class="col1">
+								<div class="h_nav">
+									<h4></h4>
+									<ul>
+						
+									</ul>	
+								</div>							
+							</div>
+						
+							<div class="col1">
+								<div class="h_nav">
+									<h4>Popular Brands</h4>
+									<ul>
+										
+									</ul>	
+								</div>												
+							</div>
+						  </div>
+						</div>
+			    </li>
+			    	<li id="search-bar" style="width: 100%; " data-hook>
+              <%= render :partial => 'spree/shared/search' %>
+          </li>	
+			  </ul> 
+			</div>
+		<!-- login modal -->
+		<div class="modal fade" id="myModal">
+    	<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Log-in</h4>
+            </div>
+            <div class="modal-body">
+              <%= form_for Spree::User.new, :as => :spree_user, :url => spree.create_new_session_path do |f| %>
+              <fieldset id="password-credentials">
+                <div class="form-group">
+                  <%= f.email_field :email, :class => 'form-control', :tabindex => 1, :placeholder => Spree.t(:email) %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password, :class => 'form-control', :tabindex => 2, :placeholder => Spree.t(:password) %>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me, Spree.t(:remember_me) %>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <%= f.submit Spree.t(:login), :class => 'btn btn-lg btn-success btn-block', :tabindex => 3 %>
+                </div>
+              </fieldset>
+            <% end %>
+          </div>
+        </div>
+      </div>
+		</div>
+		<!-- end of login modal -->
+		<!-- Signup modal -->
+			<div class="modal fade" id="signupModal">
+    	<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Shop by</h4>
+            </div>
+            <div class="modal-body">
+            	<div class="container">
+               	<%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
+               </div>
+              </div>
+          </div>
+        </div>
+      </div>
+		</div>
+		<!-- end of signup modal -->
+	</div>
+</div>

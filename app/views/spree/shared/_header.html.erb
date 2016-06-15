@@ -1,44 +1,14 @@
- <script>
-   $(document).ready( function() {
-    $('#myCarousel').carousel({
-    	interval:   4000
-	});
-	
-	var clickEvent = false;
-	$('#myCarousel').on('click', '.nav a', function() {
-			clickEvent = true;
-			$('.nav li').removeClass('active');
-			$(this).parent().addClass('active');		
-	}).on('slid.bs.carousel', function(e) {
-		if(!clickEvent) {
-			var count = $('.nav').children().length -1;
-			var current = $('.nav li.active');
-			current.removeClass('active').next().addClass('active');
-			var id = parseInt(current.data('slide-to'));
-			if(count == id) {
-				$('.nav li').first().addClass('active');	
-			}
-		}
-		clickEvent = false;
-	});
-});
-
-
-
-
- </script>
- 
-  <div id="spree-header">
+<div id="spree-header">
    <div class="container" >
   </div>
     <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
   </div>
   
-  // Javascript container boxes
-<!--
+
   <div class="row">
       <div class="container">
               <div class="col-md-4" id="sizof">
+                    <%= image_tag("app.png") %> 
                   
                   <div class="view-button">
                       <a href="http://www.expressmobilephone.com/t/categories/new-node"><p class="view-button-title">View Apple Products </p> </a>
@@ -47,102 +17,20 @@
 
 
                <div class="col-md-4" id="sizof">
-                   
+                          <%= image_tag("samsungh.png") %> 
+                           
                         <div class="view-button">
                             <a href="http://www.expressmobilephone.com/t/categories/samsung"><p class="view-button-title">View Samsung Products </p> </a>
                         </div>
                </div>
    
                 <div class="col-md-4" id="sizof">
-                  
-                        <article class="view-button">
+                        <%= image_tag("adaptor.png") %> 
+                        
+                        <div class="view-button">
                               <a href="http://www.expressmobilephone.com/t/categories/accessories"><p class="view-button-title">View Accessories</p> </a>
-                        </article>
+                        </div>
               </div>
      </div>   
- </div>  
- -->
- 
- 
-  <div class="container" id="top-carousel">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <%= image_tag 'sam4.jpg' %>
-                <div class="carousel-caption">
-                    <div class="transbox">
-                    <h3>Express Mobile Phone</h3>
-                     <hr>
-                    <p>
-                        Your choice in guaranteed like new phones.</p>
-                        
-                    </div>
-                    
-                    <p><a href="http://www.expressmobilephone.com/t/categories/new-node" class="btn btn-danger active">Browse Apple Products</a><a href="http://www.expressmobilephone.com/t/categories/samsung" class="btn btn-primary active">Browse Samsung Products</a></p>
-                 
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-                <%= image_tag 'sam3.jpg' %>
-                <div class="carousel-caption">
-                  <div class="transbox">
-                    <h3> Shipping</h3>
-                        <hr>
-                     <p> We offer local pickup at our Pensacola, FL location, and shipping to all 50 U.S. States.</p>
-                     
-                       </div>
-                       
-                      <p><a href="http://www.expressmobilephone.com/t/categories/new-node" class="btn btn-danger active">Browse Apple Products</a><a href="http://www.expressmobilephone.com/t/categories/samsung" class="btn btn-primary active">Browse Samsung Products</a></p>
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-               <%= image_tag 'sam.jpg' %>
-                <div class="carousel-caption">
-                  <div class="transbox">
-                    <h3>
-                        Frequently Asked Questions</h3>
-                        <hr>
-                    <p>
-                        If you would like to see answers to common concerns regarding shipping, products, or warranties check out our F.A.Q</p>
-                 
-                        </div>
-                        <p><a href="http://www.expressmobilephone.com/t/categories/new-node" class="btn btn-danger active">Browse Apple Products</a><a href="http://www.expressmobilephone.com/t/categories/samsung" class="btn btn-primary active">Browse Samsung Products</a></p>
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-                 <%= image_tag 'sam2.jpg' %>
-                <div class="carousel-caption">
-                  <div class="transbox">
-                      <div class="underline>">
-                    <h3>
-                       Who we are</h3>
-                       </div>
-                       <hr>
-                    <p>
-                       We are a company dedicated to Mobile devices.</p>
-        
-                        </div>
-                        <p><a href="" class="btn btn-danger active">Browse Apple Products</a><a href="" class="btn btn-primary active">Browse Samsung Products</a></p>
-                </div>
-            </div>
-            <!-- End Item -->
-        </div>
-        <!-- End Carousel Inner -->
-        
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-        
-        
-    </div>
-    <!-- End Carousel -->
-</div>
+     </div>
 
