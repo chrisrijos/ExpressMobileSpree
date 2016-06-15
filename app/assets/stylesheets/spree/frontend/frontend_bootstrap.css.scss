@@ -956,13 +956,17 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: lightgray;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  opacity: 1;
 
 }
 
 	.view-button{
 	width:100%;
 	height:0px;
-	background:#3366ff;
+	background: white;
 	position:relative;
 	bottom:0;
 	font-family: 'Quicksand', sans-serif;
@@ -981,7 +985,7 @@ hr {
 	}
 	
 	.view-button-title{
-	color:#ffffff;
+	color: #454444;
 	text-align:center;
 	}
 	
