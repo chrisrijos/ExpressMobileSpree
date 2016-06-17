@@ -982,7 +982,7 @@ hr {
   
   
   height: 32%;
-  width: 100%;
+  width: 80%;
   position:relative;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1030,10 +1030,14 @@ hr {
 	color:#474747;
 	text-align:center;
 	}
-	
+	@media screen and (max-width: 468px){
+	  .logo-image {
+      height: 100%;
+      width: 100%;
+      padding-right: auto;
+    }
+	}
 	@media screen and (min-width: 480px) {
-	  
-
 	  
    .view-button{
     	width:100%;
@@ -1052,10 +1056,12 @@ hr {
     	}
   }
 	
-.gi-2x{font-size: 2em;}
-.gi-3x{font-size: 3em;}
-.gi-4x{font-size: 4em;}
-.gi-5x{font-size: 5em;}
-	
+  .faicons {
+  position: relative;
+  color: black;
+  padding-right: 10px;
+  }
+  
+
 
 

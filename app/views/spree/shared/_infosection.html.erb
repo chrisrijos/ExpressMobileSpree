@@ -1,0 +1,106 @@
+<style>
+
+    #info-row{
+        overflow-x: hidden;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        color: steel;
+        
+    }
+    #shipping-col{
+        background: white;
+        float: center;
+        position: relative;
+    }
+    #shipping-container{
+       background-color: yellowgreen;
+       margin-bottom: 6px;
+       width: 100%;
+       height: 100%;
+       border-style: solid;
+        border-color: black;
+       border-width: 2px;
+       opacity: .8;
+    }
+     #shipping-container1{
+       background-color: indianred;
+       margin-bottom: 6px;
+       width: 100%;
+       height: 100%;
+       border-style: solid;
+        border-color: black;
+       border-width: 2px;
+       opacity: .8;
+    }
+      #shipping-container2{
+       background-color: coral;
+       margin-bottom: 6px;
+       width: 100%;
+       height: 100%;
+       border-style: solid;
+        border-color: black;
+       border-width: 2px;
+       opacity: .8;
+    }
+      #shipping-container3{
+       background-color: lightsteelblue;
+       margin-bottom: 6px;
+       width: 100%;
+       height: 100%;
+       border-color: black;
+       border-width: 2px;
+       border-style: solid;
+       opacity: .8;
+    }
+</style>
+
+<script>
+    var looper;
+    var degrees = 0;
+    function rotateAnimation(faicons, speed){
+        var elem = document.getElementsByClassName(faicons);
+        elem.style.transform = "rotate("+degrees+"deg)";
+        looper = setTimeout('rotateAnimation(\'+faicons+'\','+speed+')',speed);
+        degrees++;
+        if (degrees > 359){
+            degrees = 1;
+        }
+        
+        
+    }
+</script>
+
+ 
+
+<div class="container">
+     
+    <div class="row" id="info-row">
+        <div class="container">
+            <div class="col-md-3" id="shipping-col">
+                <div class="container" id="shipping-container">
+                    <h4 class="infobox"><%= fa_icon "keyboard-o 2x", class:"faicons"%> How it Works?</h4>
+                    <script>rotateAnimation("faicons",20);</script>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-md-3" id="shipping-col">
+                <div class="container" id="shipping-container1">
+                    <h4 class="infobox"><%= fa_icon "plane 2x", class:"faicons" %> Fast Shipping and Tracking</h4>
+                    <p>Fast Delivery available through UPS and USPS</p>
+                </div>
+            </div>
+            <div class="col-md-3"  id="shipping-col">
+                <div class="container" id="shipping-container2">
+                    <h4 class="infobox"><%= fa_icon "money 2x", class:"faicons" %> Safe and Secure</h4>
+                    <p>Lowest Prices on the Web</p>
+                </div>
+            </div>
+            <div class="col-md-3"  id="shipping-col">
+                <div class="container" id="shipping-container3">
+                    <h4 class="infobox"><%= fa_icon "mobile-phone 2x", class:"faicons" %>     Promotions</h4>
+                    <p>Check out our Promotions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
