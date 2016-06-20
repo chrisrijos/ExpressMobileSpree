@@ -1033,15 +1033,18 @@ hr {
 	color:#474747;
 	text-align:center;
 	}
+	
 	@media screen and (max-width: 468px){
+	 
+	  
 	  .logo-image {
       height: 100%;
       width: 100%;
-      padding-right: auto;
+      overflow: hidden;
+      padding-right: 25%;
     }
       #sizof {
     
-      
       height: 32%;
       width: 100%;
       position:relative;
